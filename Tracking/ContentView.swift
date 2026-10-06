@@ -21,7 +21,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Task Groups")
+            .navigationTitle(String(localized: "Task Groups"))
             .listStyle(.sidebar)
         } detail: {
             if let group = selectedGroup {
@@ -31,7 +31,7 @@ struct ContentView: View {
                     TaskGroupDetailView(group: $taskGroups[index])
                 }
             } else {
-                ContentUnavailableView("Select a Group", systemImage: "sidebar.left")
+                ContentUnavailableView(String(localized: "Select a Group"), systemImage: "sidebar.left")
             }
         }
     }

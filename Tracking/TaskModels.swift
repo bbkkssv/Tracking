@@ -23,14 +23,14 @@ struct TaskGroup: Identifiable, Hashable {
 // MOCK DATA for testing purposes
 extension TaskGroup {
     static let sampleData: [TaskGroup] = [
-        TaskGroup(title: "School", symbolName: "book.fill", tasks: [
-            TaskItem(title: "Grade Assignments"),
-            TaskItem(title: "Do discussion forums")
+        TaskGroup(title: String(localized: "School"), symbolName: "book.fill", tasks: [
+            TaskItem(title: String(localized: "Grade Assignments")),
+            TaskItem(title: String(localized: "Do discussion forums"))
         ]),
         
-        TaskGroup(title: "Home", symbolName: "house.fill", tasks: [
-            TaskItem(title: "Buy Groceries", isCompleted: true),
-            TaskItem(title: "Walk the dog")
+        TaskGroup(title: String(localized: "Home"), symbolName: "house.fill", tasks: [
+            TaskItem(title: String(localized: "Buy Groceries"), isCompleted: true),
+            TaskItem(title: String(localized: "Walk the dog"))
         ])
     ]
 }

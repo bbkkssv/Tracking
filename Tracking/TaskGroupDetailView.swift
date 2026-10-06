@@ -20,7 +20,7 @@ struct TaskGroupDetailView: View {
                                 task.isCompleted.toggle()
                             }
                         }
-                    TextField("Task Title", text: $task.title)
+                    TextField(String(localized: "Task Title"), text: $task.title)
                         .strikethrough(task.isCompleted)
                         .foregroundStyle(task.isCompleted ? .gray : .primary)
                     
@@ -33,7 +33,7 @@ struct TaskGroupDetailView: View {
         }
         .navigationTitle(group.title)
         .toolbar {
-            Button("Add Task") {
+            Button(String(localized: "Add Task")) {
                 withAnimation {
                     group.tasks.append(TaskItem(title: ""))
                 }
